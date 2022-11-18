@@ -1,0 +1,86 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    padding: 5px 0;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+.navbar h1 {
+    margin-left: 20px;
+    text-shadow: 2px 2px 2px black;
+    margin-right: 70%;
+}
+.navlinks {
+    align-items: center;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+nav a {
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    margin: 5px 15px;
+    text-shadow: 2px 2px 2px black;
+}
+.footer {
+    position: fixed;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+        .content {
+            margin: 10% auto;
+            text-align: center;
+        }
+        #login {
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            font-weight: bold;
+            width: 300px;
+            border-radius: 10px;
+            font-size: large;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <h1>Virtual Eye</h1>
+            <div class="navlinks">
+                <nav><a href="./login">login</a></nav>
+                <nav><a href="./register">register</a></nav>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Successfully Logged Out!</h3>
+            <h3 id = "info" >Login for more information</h5>
+            <button class="field" id="login" onclick="window.location.href = '/';">Log In</button>
+        </div>
+        <div class="footer">
+            <p style="color: white"><b>Copyrights &#169; 2022. All Rights Reserved.</p>
+        </div>
+    </body>
+</html>

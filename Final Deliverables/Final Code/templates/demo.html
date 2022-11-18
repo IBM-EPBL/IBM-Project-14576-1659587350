@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VirtualEye</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    padding: 5px 0;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+.navbar h1 {
+    margin-left: 20px;
+    text-shadow: 2px 2px 2px black;
+    margin-right: 70%;
+}
+.navlinks {
+    align-items: center;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+nav a {
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    margin: 5px 15px;
+    text-shadow: 2px 2px 2px black;
+}
+.footer {
+    position: fixed;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+      .grid-child {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border: 2px solid lightgrey;
+        border-radius: 20px;
+        margin: 0 20px;
+        text-align: justify;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+      }
+      .center {
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        border: 3px solid green;
+    }
+    #heading {
+      margin: 50px auto;
+    }
+    #demoBtn {
+      position: relative;
+      width: 90%;
+      padding: 10px 0;
+      bottom: 10px;
+      margin: 50px auto;
+      background-color: black;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      font-size: large;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Virtual Eye</h1>
+      <div class="navlinks">
+        <nav><a href="./about">about</a></nav>
+        <nav><a href="./demo" style="color: yellow;">demo</a></nav>
+        <nav><a href="./logout">log-out</a></nav>
+      </div>
+  </div>
+      <h1 id="heading">
+        Virtual Eye - Life Guard for Swimming Pools to Detect Active Drowning
+      </h1>
+    <hr />
+    <div class="grid-container">
+      <div class="grid-child">
+        <p>Swimming is one of the best exercises that helps people reduce stress in this urban lifestyle. Swimming pools are found in large numbers in hotels, weekend tourist spots and in some rare cases, people's backyards. Beginners often find it difficult to control their breath while underwater and this may cause breathing trouble which in turn may cause a drowning accident. Worldwide, drowning produces a high rate of mortality without causing injury among children. Children under the age of 6 are found to be at the greatest risk of drowning. Such kinds of deaths account for a third of accidental deaths globally, with about 1.2 million cases yearly. Thus, we need a suitable system in place to detect active drowning to prevent loss of life.
+        </p>
+        <form action="./result" method="GET">
+          <input type="submit" id="demoBtn" value="click me for a demo"/>
+        </form>
+      </div>
+
+
+      <div class="grid-child">
+        <img src="{{url_for('static', filename='drowning.jpeg')}}" alt="Kanye" />
+      </div>
+    </div>
+    <div style="background-color: black; width: 100%">
+    <div class="footer">
+        <p style="color: white"><b>Copyrights &#169; 2022. All Rights Reserved.</p>
+    </div>
+  </body>
+</html>

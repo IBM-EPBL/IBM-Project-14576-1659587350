@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    padding: 5px 0;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+.navbar h1 {
+    margin-left: 20px;
+    text-shadow: 2px 2px 2px black;
+    margin-right: 70%;
+}
+.navlinks {
+    align-items: center;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+nav a {
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    margin: 5px 15px;
+    text-shadow: 2px 2px 2px black;
+}
+.footer {
+    position: fixed;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+    .fields {
+            border: 1px solid grey;
+            display: flex;
+            flex-direction: column;
+            margin: 7.5% auto;
+            padding: 10px;
+            width: 50%;
+            border-radius: 20px;
+            margin-bottom: 0;
+        }
+        #logo {
+            height: 100px;
+            width: 200px;
+            margin: 30px auto;
+        }
+        .field {
+            font-size: large;
+            min-height: 30px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        #login {
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            font-weight: bold;
+        }
+        #goToReg {
+            margin: 30px auto;
+            width: 50%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Virtual Eye</h1>
+    </div>
+    <div class="content">
+        <div>
+            <form class="fields" action="./afterlogin" method="GET">
+                <center><h4>{{pred}}</h4></center>
+                <img id="logo" src="{{url_for('static', filename='eye.png')}}" alt="virtualEye">
+                <input class="field" type="text" name="uname" placeholder="Enter username" />
+                <input class="field" type="password" name="password" placeholder="Enter password" />
+                <input type="submit" class="field" id="login" value="login" />
+            </form>
+        </div>
+    </div>  
+    <div id="goToReg">don't have an account? <a href="./register">register here</a></div> 
+    <div class="footer">
+        <p style="color: white"><b>Copyrights &#169; 2022. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
